@@ -16,8 +16,10 @@ Bachelor of Science in Mathematical, Computational and Statistical Science
   - Played an integral role within a team to ideate, develop, and launch an Android mobile game backed by Firebase. Leveraged Java programming skills in Android Studio.
 - **Programming for Data Science**
   - Demonstrated proficiency in data science through adept utilization of Python modules. Explored data visualization, database querying, and web scraping techniques.
-- **Socrates on Trial**
-  - Delved into the philosophical and political legacy of Socrates. Fostering critical thinking and honed debating skills while analyzing his influence on Western philosophy.
+- **Functional Programming and Proving**
+  - 
+- **Parallel, Concurrent and Distributed Programming**
+  - 
 
 ## Work Experience
 

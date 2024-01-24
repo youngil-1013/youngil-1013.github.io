@@ -19,10 +19,10 @@ Semester abroad at the College of Arts and Sciences
   - Played an integral role within a team to ideate, develop, and launch an Android mobile game backed by Firebase. Leveraged Java programming skills in Android Studio.
 - **YSC2244: Programming for Data Science**
   - Demonstrated proficiency in data science through adept utilization of Python modules. Explored data visualization, database querying, and web scraping techniques.
-- **Functional Programming and Proving**
-  - Employed the Coq Proof Assitance to formalize and program proofs otherwise learned 
-- **Parallel, Concurrent and Distributed Programming**
-  - 
+- **YSC3236: Functional Programming and Proving**
+  - Employed the Coq Proof Assitance to show completeness and soundness of specifications, derive formalized proofs for iterative and tail-recursive programs, and practiced functional programmnig techniques.
+- **YSC4231: Parallel, Concurrent and Distributed Programming**
+  - Discovered major parallel, distributed, and concurrent programming techniques and problems. Covered concepts of mutual exclusion, concurrent objects, and asynchornization.
 
 ## Work Experience
 

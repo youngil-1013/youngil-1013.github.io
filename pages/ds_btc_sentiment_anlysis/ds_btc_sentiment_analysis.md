@@ -100,4 +100,4 @@ Here is the wordcloud for all comments:
 
 A one-off analysis of sentiments is not enough to tell us anything. However, if we are able to extract a time-annotated data of comments about when they were posted, it would be interesting to see the relationship between bitcoin price movements and bitcoin sentiment fluctuations.
 
-The Jupyter Notebook version of this blog post can be found here.
+The Jupyter Notebook version of this blog post can be found [here](https://github.com/youngil-1013/Reddit-Sentiment-Analysis).

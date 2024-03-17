@@ -1,4 +1,4 @@
 # Young Il's Blog
 
-Work in progress.. give me some time!
-
+[Data Science Blog: Bitcoin Sentiment Analysis](/pages/ds_btc_sentiment_anlysis/ds_btc_sentiment_analysis.md)
+[![Data Science Blog: Bitcoin Sentiment Analysis](/pages/ds_btc_sentiment_anlysis/image-7.png 'Codey the Codecademy mascot')](/pages/ds_btc_sentiment_anlysis/ds_btc_sentiment_analysis.md)

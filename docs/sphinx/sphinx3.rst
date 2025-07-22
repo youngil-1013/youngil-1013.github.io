@@ -39,11 +39,10 @@ Or you can use the following scheme:
   ^^^^^^^^^^^^^^^^^^^^^
 
 The only two requirements are that the header underline must be at least as long as the header text and the underline is directly under the header text.
-In fact, RST, similar to Python, is a whitespace-sensitive language. This means that the number of spaces and line breaks you use matter. For example, the following RST code will not render correctly:
+In fact, RST, similar to Python, is a whitespace-sensitive language. This means that the number of spaces and line breaks you use matter. For example, the following RST code will not render correctly (note the erraneous whitespacing):
 
 .. code-block:: rst
 
   Hello World
 
   ===========
-

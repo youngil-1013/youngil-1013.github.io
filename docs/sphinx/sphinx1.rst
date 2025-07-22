@@ -105,9 +105,9 @@ and the page will be hosted on a local server (mine is at http://127.0.0.1:8000/
 .. code-block:: bash
 
   pip install sphinx-autobuild
-  sphinx-autobuild tmp tmp/_build/html
+  sphinx-autobuild . _build
 
-Note that the first argument is the source directory and the second argument is the build directory. Everytime a change is made to the source directory, the build directory will be updated automatically.
+Note that the first argument is the source directory (:bash:`.` refers to the current directory) and the second argument is the build directory (:bash:`_build` refers to the :bash:`_build\` folder in the current directory). Everytime a change is made to the source directory, the build directory will be updated automatically.
 
 As a sanity check, your :bash:`mywebsites` directory should look like this:
 

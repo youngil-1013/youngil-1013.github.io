@@ -54,8 +54,8 @@ Work Experience
 
 Research Experience
 -------------------
-  | **Research Assitant, Zero Forcing Numbers of Cayley Graphs** (May 2024 - Current)
-
+  | **Research Assitant, Zero Forcing Numbers of Cayley Graphs** (May 2024 - Current)::
+    
     * Supervisor: Dr. Grant Rao
     * Implemented a pseudo-Depth-First-Search Algorithm in **Python**, bringing down its runtime from exponential to linear time complexity, resulting in a 95% reduction in processing time for larger graphs. 
     * Applied algorithmic approaches to calculate zero-forcing numbers efficiently across three different graph families and mathematically proved their numbers.

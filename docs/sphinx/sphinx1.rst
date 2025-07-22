@@ -8,8 +8,6 @@ Sphinx and RST 1: Introduction and Setting up Sphinx
 
 Motivation
 ----------
-Ever since I began programming, I have always wanted to have my own website where I could upload my projects, in a enjoyable but also informative way.
-
 During the first year of my computer science journey at Yale-NUS College, 
 I met Professor Olivier Danvy, who would always write his lecture notes in Sphinx, a documentation generator that coverts RST files into HTML. 
 Following his footsteps, I decided to build my own website in Sphinx and RST and deploy the website using GitHub Pages.
@@ -33,13 +31,20 @@ Sphinx setup for Ubuntu
 The full prerequisites can be found in the `Sphinx documentation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_.
 However, if you have a fresh Ubuntu installation, follow these steps
 
-* Install Python-full using apt (Ubuntu's package manager)
+* Install Python-full using apt (Ubuntu's package manager). This installation is global and will affect your system.
 
   .. code-block:: bash
     
     sudo apt install python3-full
 
-* Create a Python virtual environment
+* Create an umbrella folder for your project and navigate to it (The name is arbitrary).
+
+  .. code-block:: bash
+    
+    mkdir mywebsites
+    cd mywebsites
+
+* Create a Python virtual environment. This will create a folder called `myenv` in your current directory (Once again, the name is arbitrary).
 
   .. code-block:: bash
     
@@ -51,13 +56,13 @@ However, if you have a fresh Ubuntu installation, follow these steps
     
     source myenv/bin/activate
 
-* Install Sphinx using pip
+* Install Sphinx using pip (add an optional :bash:`--break-system-packages` to the end of the command if you see an :bash:`error: externally-managed-environment`) after running the command below.
 
   .. code-block:: bash
     
     pip install -U sphinx
 
-* Deactivate the virtual environment whenever you are documentation
+* Deactivate the virtual environment whenever you are done editting your website.
 
   .. code-block:: bash
     
@@ -65,7 +70,7 @@ However, if you have a fresh Ubuntu installation, follow these steps
 
 Creating the Python virtual environment is important because it allows you to install Sphinx and its dependencies without affecting the rest of your system. Furthermore, some packages may not be available in the Ubuntu package manager, so you may need to install them using pip. 
 
-To make sure the installation was successful, **start the virtual environment** and run the following command:
+To make sure the installation was successful, let us create a temporary Sphinx project. **Start the virtual environment** and run the following command:
 
 .. code-block:: bash
 
@@ -103,3 +108,18 @@ and the page will be hosted on a local server (mine is at http://127.0.0.1:8000/
   sphinx-autobuild tmp tmp/_build/html
 
 Note that the first argument is the source directory and the second argument is the build directory. Everytime a change is made to the source directory, the build directory will be updated automatically.
+
+As a sanity check, your :bash:`mywebsites` directory should look like this:
+
+.. code-block:: bash
+
+  mywebsites/
+  ├── myenv/
+  └── tmp/
+      ├── _build/
+      ├── conf.py
+      ├── index.rst (This is your main file)
+      ├── make.bat
+      ├── Makefile
+      ├── _static/
+      └── _templates/

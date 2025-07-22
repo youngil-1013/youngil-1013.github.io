@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphinx and RST 2: Deploying my Website on GitHub Pages &mdash; Young&#39;s Webpage</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sphinx and RST 3: Hello World" href="sphinx3.html" />
+    <link rel="prev" title="Sphinx and RST 1: Introduction and Setting up Sphinx" href="sphinx1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Young's Webpage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">About me:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../details/curriculum_vitae.html">Curriculum Vitae</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sphinx_index.html">Sphinx and RST</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sphinx1.html">Sphinx and RST 1: Introduction and Setting up Sphinx</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sphinx and RST 2: Deploying my Website on GitHub Pages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#github-pages-and-actions">GitHub Pages and Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloning-the-repository-and-github-actions-configuration">Cloning the Repository and GitHub Actions Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sanity-testing">Sanity Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#github-pages-configuration">GitHub Pages Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx3.html">Sphinx and RST 3: Hello World</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Young's Webpage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="sphinx_index.html">Sphinx and RST</a></li>
+      <li class="breadcrumb-item active">Sphinx and RST 2: Deploying my Website on GitHub Pages</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/sphinx/sphinx2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-and-rst-2-deploying-my-website-on-github-pages">
+<h1>Sphinx and RST 2: Deploying my Website on GitHub Pages<a class="headerlink" href="#sphinx-and-rst-2-deploying-my-website-on-github-pages" title="Link to this heading"></a></h1>
+<section id="github-pages-and-actions">
+<h2>GitHub Pages and Actions<a class="headerlink" href="#github-pages-and-actions" title="Link to this heading"></a></h2>
+<p>Right now, the “website” is just a bunch of HTML files in a directory, not accessible from the internet. To make it accessible, I will use GitHub Pages, which is linked with a GitHub repository.
+Following the instructions will let you create a website that is accessible online, fully customizable, and free.
+This section requires a GitHub account, which you can create at <a class="reference external" href="https:github.com">GitHub</a>. If you have never authorized your computer to access GitHub, you will need to set up access tokens.
+Create your access token by following the instructions at <a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s documentation</a>.</p>
+<p>Now, create a new repository via GitHub, and make it public (required for GitHub Pages). You can name this repository anything you want, but because this doubles as my personal website, I name it “youngil-1013.github.io”.
+This allows me to directly access my website at <a class="reference external" href="https://youngil-1013.github.io/">https://youngil-1013.github.io/</a>. If not, you will need to access it via <cite>https://&lt;your-id&gt;.github.io/&lt;repository-name&gt;</cite>.</p>
+<p>This section assumes that 1) you have a GitHub account, 2) you have created a repository, and 3) you have set up an access token and can access GitHub from your computer. Furthermore, it assumes that you have named your repository <cite>&lt;your-id&gt;.github.io</cite>.`
+If you wish to follow CodeRefinery’s instructions, you can find them at <a class="reference external" href="https://coderefinery.github.io/documentation/gh-pages/">CodeRefinery’s GitHub set-up page</a>. This page is heavily inspired by CodeRefinery’s page, but I have added a few more details to make it easier for beginners.</p>
+</section>
+<section id="cloning-the-repository-and-github-actions-configuration">
+<h2>Cloning the Repository and GitHub Actions Configuration<a class="headerlink" href="#cloning-the-repository-and-github-actions-configuration" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p><cite>Tip: remove all temporary files from Part 1 before proceeding</cite></p>
+</div></blockquote>
+<p>The first step is to clone the repository to your local machine. I highly recommend to start the python virtual environment as we have done in the <a class="reference internal" href="sphinx1.html#setupfor-ubuntu"><span class="std std-ref">Sphinx setup for Ubuntu</span></a>. You can do this by running the following command in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;your-id&gt;.github.io
+<span class="nb">cd</span><span class="w"> </span>&lt;your-id&gt;.github.io
+</pre></div>
+</div>
+<p>You will initially see that the repository is empty (or at best, has a README file). Now, you will need to create a Sphinx project in the repository. We have already done something similar in the previous section:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>docs
+<span class="nb">cd</span><span class="w"> </span>docs
+sphinx-quickstart
+</pre></div>
+</div>
+<p>docs is the directory where Sphinx will look for the RST files. You can name this directory anything you want, but for me, I have named it “docs”. Let us push what we have to GitHub. I would recommend creating a .gitignore file to ignore a few files that we do not want to push to GitHub:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>..
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;_build/&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.gitignore<span class="w"> </span><span class="c1"># Ignores the build directory</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;.vscode/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore<span class="w"> </span><span class="c1"># if you are using Visual Studio Code</span>
+</pre></div>
+</div>
+<p>The .ignore file is used to ignore files that you do not want to push to GitHub. Depending on which IDE you are using, you may want to add more files to the .gitignore file. Now, let us push the changes to GitHub:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>If you have an access error pop up after trying to push the changes, you may need to set up a Personal Access Token via GitHub and use the token as your password.
+Your repository should now be uploaded to <cite>github.com/&lt;your-id&gt;.&lt;your-id&gt;.github.io</cite>. Mine is at <a class="reference external" href="https://github.com/youngil-1013/youngil-1013.github.io">https://github.com/youngil-1013/youngil-1013.github.io</a>
+However, that’s only the source code. We want to deploy the website. To do this, we will use GitHub Actions and Pages. First of all, you will need to create a .github directory in the root of your repository. This directory tells GitHub to run certain actions when you push to the repository.
+Then, create a workflows directory inside the .github directory, which lets us set up jobs that can be triggered when certain events occur. You can either use your file explorer to create these folders or use the following bash command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>.github
+mkdir<span class="w"> </span>.github/workflows
+</pre></div>
+</div>
+<p>Now, create a file named deploy.yml in the workflows directory. This file will contain the instructions for GitHub Actions to deploy the website. You can create this file using your text editor or use the following bash command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>.github/workflows/deploy.yml
+</pre></div>
+</div>
+<p>Now, open the deploy.yml file in your text editor and paste the following code:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy Docs</span>
+
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">workflow_dispatch</span><span class="p p-Indicator">]</span>
+
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">docs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">pip install sphinx myst-parser sphinx-toolbox sphinx_rtd_theme</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sphinx build</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">sphinx-build docs _build</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span>
+<span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39; }}</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
+<span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_build/</span>
+<span class="w">          </span><span class="nt">force_orphan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>Let’s understand what this code does:</p>
+<ul class="simple">
+<li><p>The <strong>name</strong> of the workflow is “Deploy Docs”.</p></li>
+<li><p>The workflow is triggered <strong>on</strong> a push, pull request, or when you manually trigger the workflow.</p></li>
+<li><p>The <strong>permissions</strong> are set to write (so that the workflow can write to the repository).</p></li>
+<li><p>The <strong>job</strong> specifies what the job actually is:</p>
+<ul>
+<li><p>The job <strong>runs on</strong> the latest version of Ubuntu.</p></li>
+<li><p>The <strong>steps</strong> to the job are as follows:</p>
+<ul>
+<li><p>The repository is <strong>checked out</strong>.</p></li>
+<li><p><strong>Python is set up</strong>.</p></li>
+<li><p><strong>Install dependencies</strong> refers the following:</p>
+<ul>
+<li><p>Calls <em>pip</em>, python’s package manager, to install the following packages:</p>
+<ul>
+<li><p><em>sphinx</em> is the documentation generator.</p></li>
+<li><p><em>myst-parser</em> is the markdown parser for Sphinx.</p></li>
+<li><p><em>sphinx-toolbox</em> is a collection of Sphinx extensions.</p></li>
+<li><p><em>sphinx_rtd_theme</em> is the theme for Sphinx.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Sphinx build</strong> refers the following:</p>
+<ul>
+<li><p>Calls <em>sphinx-build</em> to build the documentation in the docs directory and output it to the _build directory.</p></li>
+</ul>
+</li>
+<li><p><strong>Deploy to GitHub Pages</strong> refers the following:</p>
+<ul>
+<li><p>The action <strong>uses</strong> the <a class="reference external" href="mailto:peaceiris/actions-gh-pages&#37;&#52;&#48;v3">peaceiris/actions-gh-pages<span>&#64;</span>v3</a> action.</p></li>
+<li><p>The action is <strong>conditional</strong> on the event being a push to the main branch.</p></li>
+<li><p>The action <strong>publishes</strong> the _build directory to the gh-pages branch.</p></li>
+<li><p>The action uses the <strong>github_token</strong> to authenticate the action.</p></li>
+<li><p>The action <strong>publishes</strong> the _build directory to the gh-pages branch.</p></li>
+<li><p>The action <strong>force_orphan</strong> is set to true, which means that the gh-pages branch will be overwritten every time the action is run.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>During a push, pull request, or manual trigger, you can check out what the job does at the Actions tab of the repository. There are two important sections to the deploy.yml file we have written.
+First, you must include all dependencies (anything you have downloaded with <code class="code highlight bash docutils literal highlight-bash">pip<span class="w"> </span>install<span class="w"> </span>...</code> in the Sphinx project after the pip install command or you might see the following error message in the Actions tab after clicking on the job:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">Traceback</span>
+<span class="o">=========</span>
+
+<span class="w">      </span>File<span class="w"> </span><span class="s2">&quot;/opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages/sphinx/registry.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span>xxx,<span class="w"> </span><span class="k">in</span><span class="w"> </span>load_extension
+<span class="w">        </span>raise<span class="w"> </span>ExtensionError<span class="o">(</span>
+<span class="w">            </span>__<span class="o">(</span><span class="s1">&#39;Could not import extension %s&#39;</span><span class="o">)</span><span class="w"> </span>%<span class="w"> </span>extname,<span class="w"> </span>err
+<span class="w">        </span><span class="o">)</span><span class="w"> </span>from<span class="w"> </span>err
+<span class="w">    </span>sphinx.errors.ExtensionError:<span class="w"> </span>Could<span class="w"> </span>not<span class="w"> </span>import<span class="w"> </span>extension<span class="w"> </span>&lt;package_name&gt;<span class="w"> </span><span class="o">(</span>exception:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span><span class="s1">&#39;&lt;package_name&gt;&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+<section id="sanity-testing">
+<h3>Sanity Testing<a class="headerlink" href="#sanity-testing" title="Link to this heading"></a></h3>
+<p>Let’s double check that your repository on GitHub has the following structure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;your-id&gt;.github.io/
+├──<span class="w"> </span>.github/
+│<span class="w">   </span>└──<span class="w"> </span>workflows/
+│<span class="w">       </span>└──<span class="w"> </span>deploy.yml
+├──<span class="w"> </span>docs/
+│<span class="w">   </span>├──<span class="w"> </span>conf.py
+│<span class="w">   </span>├──<span class="w"> </span>index.rst
+│<span class="w">   </span>├──<span class="w"> </span>make.bat
+│<span class="w">   </span>└──<span class="w"> </span>Makefile
+├──<span class="w"> </span>.gitignore
+└──<span class="w"> </span>README.md
+</pre></div>
+</div>
+<p>If not, you may need to go back and make changes to the repository. If you see any errors (Red X-marks) in the Actions tab, you can click on the error to see what went wrong. If the errors are anything other than the ones mentioned above, you are on your own here.</p>
+</section>
+</section>
+<section id="github-pages-configuration">
+<h2>GitHub Pages Configuration<a class="headerlink" href="#github-pages-configuration" title="Link to this heading"></a></h2>
+<p>We’re almost there. Right now, even if you push to the repository, you will not be able to see the website because our GitHub Action builds the website and deploys it to the gh-pages branch. Just a few more steps to go.</p>
+<blockquote>
+<div><p><cite>“Let perseverance finish its work so that you may be mature and complete, not lacking anything.”</cite></p>
+</div></blockquote>
+<p>Let us now tell Github where to look for the website. Go to the repository <strong>Settings</strong> pages and find the <strong>Pages</strong> section. You will see a dropdown menu that says “None”. Click on this and select the gh-pages branch (If this does not appear, check the Actions tab, as there might be errors). Then, select /(root) as the source. Then, press the <strong>Save</strong> button. Now, all is set!</p>
+<p>Now, push everything you have onto the repository. You can see your “website” live on the internet at <cite>https://&lt;your-id&gt;.github.io/&lt;repository-name&gt;</cite>. It usually takes a few seconds to a few minutes for the website to be live. If you see a 404 error even after waiting, check if the <strong>Actions</strong> tab has any errors. If you see an error, you can click on the error to see what went wrong.
+If the errors are anything other than the ones mentioned above, you are on your own here.</p>
+<p>Congratulations! You have successfully deployed your website using Sphinx and GitHub Pages. But to be honest, the website is a bit bleak as of now. In the next section, I will discuss how we can add more features and pages to the website.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sphinx1.html" class="btn btn-neutral float-left" title="Sphinx and RST 1: Introduction and Setting up Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sphinx3.html" class="btn btn-neutral float-right" title="Sphinx and RST 3: Hello World" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Young Il Kim.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

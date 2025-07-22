@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphinx and RST 1: Introduction and Setting up Sphinx &mdash; Young&#39;s Webpage</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sphinx and RST 2: Deploying my Website on GitHub Pages" href="sphinx2.html" />
+    <link rel="prev" title="Sphinx and RST" href="sphinx_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Young's Webpage
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">About me:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../details/curriculum_vitae.html">Curriculum Vitae</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sphinx_index.html">Sphinx and RST</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sphinx and RST 1: Introduction and Setting up Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rst-and-sphinx">RST and Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphinx-setup-for-ubuntu">Sphinx setup for Ubuntu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx2.html">Sphinx and RST 2: Deploying my Website on GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx3.html">Sphinx and RST 3: Hello World</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Young's Webpage</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="sphinx_index.html">Sphinx and RST</a></li>
+      <li class="breadcrumb-item active">Sphinx and RST 1: Introduction and Setting up Sphinx</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/sphinx/sphinx1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-and-rst-1-introduction-and-setting-up-sphinx">
+<h1>Sphinx and RST 1: Introduction and Setting up Sphinx<a class="headerlink" href="#sphinx-and-rst-1-introduction-and-setting-up-sphinx" title="Link to this heading"></a></h1>
+<section id="motivation">
+<span id="id1"></span><h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading"></a></h2>
+<p>During the first year of my computer science journey at Yale-NUS College,
+I met Professor Olivier Danvy, who would always write his lecture notes in Sphinx, a documentation generator that coverts RST files into HTML.
+Following his footsteps, I decided to build my own website in Sphinx and RST and deploy the website using GitHub Pages.
+Because this blog is about how I built the website and the nested blog in it, this blog a self-referential blog.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://en.wikipedia.org/wiki/Liar_paradox">“This is not a self-referential sentence.”</a></p>
+</div></blockquote>
+</section>
+<section id="rst-and-sphinx">
+<h2>RST and Sphinx<a class="headerlink" href="#rst-and-sphinx" title="Link to this heading"></a></h2>
+<p>So what is this RST (or ReST) and Sphinx? RST is a markup language (think HTML and Markdown) that is used to write documents and define their formats.</p>
+<p>Sphinx is a tool that takes markup files (RST and/or Markdown) and converts them into HTML, PDF, and other formats.
+Sphinx was originally built for RST, but as Markdown became more popular, they added support for it too.</p>
+<p>In this blog, I will go through how I have set up Sphinx and RST to build this website. This study follows <a class="reference external" href="https://coderefinery.github.io/documentation/">CodeRefinery team’s documentation</a>.</p>
+</section>
+<section id="sphinx-setup-for-ubuntu">
+<span id="setupfor-ubuntu"></span><h2>Sphinx setup for Ubuntu<a class="headerlink" href="#sphinx-setup-for-ubuntu" title="Link to this heading"></a></h2>
+<p>The full prerequisites can be found in the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">Sphinx documentation</a>.
+However, if you have a fresh Ubuntu installation, follow these steps</p>
+<ul>
+<li><p>Install Python-full using apt (Ubuntu’s package manager). This installation is global and will affect your system.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-full
+</pre></div>
+</div>
+</li>
+<li><p>Create an umbrella folder for your project and navigate to it (The name is arbitrary).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>mywebsites
+<span class="nb">cd</span><span class="w"> </span>mywebsites
+</pre></div>
+</div>
+</li>
+<li><p>Create a Python virtual environment. This will create a folder called <cite>myenv</cite> in your current directory (Once again, the name is arbitrary).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
+</pre></div>
+</div>
+</li>
+<li><p>Activate the virtual environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate
+</pre></div>
+</div>
+</li>
+<li><p>Install Sphinx using pip (add an optional <code class="code highlight bash docutils literal highlight-bash">--break-system-packages</code> to the end of the command if you see an <code class="code highlight bash docutils literal highlight-bash">error:<span class="w"> </span>externally-managed-environment</code>) after running the command below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>sphinx
+</pre></div>
+</div>
+</li>
+<li><p>Deactivate the virtual environment whenever you are done editting your website.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Creating the Python virtual environment is important because it allows you to install Sphinx and its dependencies without affecting the rest of your system. Furthermore, some packages may not be available in the Ubuntu package manager, so you may need to install them using pip.</p>
+<p>To make sure the installation was successful, let us create a temporary Sphinx project. <strong>Start the virtual environment</strong> and run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>tmp
+<span class="nb">cd</span><span class="w"> </span>tmp
+sphinx-quickstart
+</pre></div>
+</div>
+<p>The quickstart will ask you a series of questions to set up your project.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>Separate<span class="w"> </span><span class="nb">source</span><span class="w"> </span>and<span class="w"> </span>build<span class="w"> </span>directories<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>n<span class="o">]</span>:<span class="w"> </span>&lt;hit<span class="w"> </span>enter&gt;
+&gt;<span class="w"> </span>Project<span class="w"> </span>name:<span class="w"> </span>&lt;your<span class="w"> </span>project<span class="w"> </span>name&gt;
+&gt;<span class="w"> </span>Author<span class="w"> </span>name<span class="o">(</span>s<span class="o">)</span>:<span class="w"> </span>&lt;your<span class="w"> </span>name&gt;
+&gt;<span class="w"> </span>Project<span class="w"> </span>release<span class="w"> </span><span class="o">[]</span>:<span class="w"> </span><span class="m">0</span>.1
+&gt;<span class="w"> </span>Project<span class="w"> </span>language<span class="w"> </span><span class="o">[</span>en<span class="o">]</span>:<span class="w"> </span>&lt;hit<span class="w"> </span>enter&gt;
+</pre></div>
+</div>
+<p>And a whole bunch of files will be created for you. Now, you can build your project using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>.<span class="w"> </span>_build
+</pre></div>
+</div>
+<p>Which output an <code class="code highlight bash docutils literal highlight-bash">index.html</code> file in the <cite>_build</cite> directory. You can directly open this file through your browser to see the page or you can run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>xdg-open<span class="w"> </span>_build/index.html
+</pre></div>
+</div>
+<p>and the page will be hosted on a local server (mine is at <a class="reference external" href="http://127.0.0.1:8000/index.html">http://127.0.0.1:8000/index.html</a>, but yours may be different. Check your terminal for the correct address). But this requires us to build and open the page every time we make a change. To automate this process, we can use the <cite>sphinx-autobuild</cite> package.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx-autobuild
+sphinx-autobuild<span class="w"> </span>.<span class="w"> </span>_build
+</pre></div>
+</div>
+<p>Note that the first argument is the source directory (<code class="code highlight bash docutils literal highlight-bash">.</code> refers to the current directory) and the second argument is the build directory (<code class="code highlight bash docutils literal highlight-bash">_build</code> refers to the :bash:<a href="#id2"><span class="problematic" id="id3">`</span></a>_build` folder in the current directory). Everytime a change is made to the source directory, the build directory will be updated automatically.</p>
+<p>As a sanity check, your <code class="code highlight bash docutils literal highlight-bash">mywebsites</code> directory should look like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mywebsites/
+├──<span class="w"> </span>myenv/
+└──<span class="w"> </span>tmp/
+<span class="w">    </span>├──<span class="w"> </span>_build/
+<span class="w">    </span>├──<span class="w"> </span>conf.py
+<span class="w">    </span>├──<span class="w"> </span>index.rst<span class="w"> </span><span class="o">(</span>This<span class="w"> </span>is<span class="w"> </span>your<span class="w"> </span>main<span class="w"> </span>file<span class="o">)</span>
+<span class="w">    </span>├──<span class="w"> </span>make.bat
+<span class="w">    </span>├──<span class="w"> </span>Makefile
+<span class="w">    </span>├──<span class="w"> </span>_static/
+<span class="w">    </span>└──<span class="w"> </span>_templates/
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sphinx_index.html" class="btn btn-neutral float-left" title="Sphinx and RST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sphinx2.html" class="btn btn-neutral float-right" title="Sphinx and RST 2: Deploying my Website on GitHub Pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Young Il Kim.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
